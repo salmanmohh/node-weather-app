@@ -6,7 +6,7 @@ const forecast = document.querySelector('#forecast')
 form.addEventListener('submit',(e)=>{
     e.preventDefault()
     const address = search.value
-    const url = 'http://localhost:3000/weather/?address='+address
+    const url = '/weather/?address='+address
     
     search_loc.textContent = 'Loading...'
     forecast.textContent = ''
