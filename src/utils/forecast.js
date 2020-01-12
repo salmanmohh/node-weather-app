@@ -11,9 +11,11 @@ const forecast=(longitude,latitude,callback)=>{
             const data = {
                 summary: body.daily.data[0].summary,
                 temperature : body.currently.temperature,
-                rainProb: body.currently.precipProbability
+                rainProb: body.currently.precipProbability,
+                temp_max: body.daily.data[0].temperatureHigh,
+                temp_min: body.daily.data[0].temperatureLow
             }
-            callback(undefined,data.summary +'It\'s currently '+data.temperature+' degrees out.There is '+(data.rainProb*100)+'% chance of rain.')
+            callback(undefined,data.summary +'It\'s currently '+data.temperature+' degrees out.There is '+(data.rainProb*100)+'% chance of rain.Today had a temperature high of '+data.temp_max+' with a low of '+data.temp_min+'.')
         }
     })
 }
