@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{title}}</title>
+        <link rel="icon" href="../img/weather.png">
+        <link rel="stylesheet" href="../css/styles.css">
+    </head>
+    <body>
+        <div class='main-content'>
+           {{>header}} 
+           <p>Use this site to get your weather!</p><br>
+           <form>
+               <input type="text" name="address" id="address" placeholder='example New York'>
+               <button>Search</button>
+           </form>
+           <br>
+           <p id='location'></p>
+           <p id='forecast'></p>
+        </div cla>
+        {{>footer}}
+    </body>
+</html>
+<script src = '../js/index.js'></script>
